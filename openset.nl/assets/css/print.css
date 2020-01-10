@@ -1,0 +1,191 @@
+/* @print */
+@media print {
+
+	@page { 
+	width: 210mm !important;
+	height: 297mm !important;
+	margin-top: 0 !important; /* Before 3mm */
+	margin-bottom: 0 !important; /* Before 3mm */
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+	}
+	
+	html, body { 
+		height: auto !important;
+		overflow: auto;
+	}
+	
+	body {
+		font-size: 9.3pt;
+		background-color: #FFFFFF;
+		margin: 0;
+		counter-reset: page1;
+		counter-increment: page;
+	}
+	
+	/* Header */
+	.article-header-print {
+		position: absolute;
+		top: 0;
+		left: 2cm !important;
+		display: inline-block;
+		width: 500px !important;
+		
+		margin-bottom: 10mm;
+	}
+	
+	.nav-openset {
+		padding-left: 0 !important;
+	}
+	
+	.edition-print {
+    	margin-top: 15px !important;
+    }
+    
+    .nav-edition-title::before {
+		content: 'Edition: ' !important;
+	}
+    
+    .fullscreen-wrapper {
+        page-break-before: avoid !important; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+		page-break-after: always !important; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    	page-break-inside: auto !important; /* or 'auto' */
+    	position: relative;
+    }
+
+    h2 {
+        page-break-before: avoid; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+		page-break-after: avoid; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    	page-break-inside: avoid; /* or 'auto' */
+    }
+        
+    .article p, .interview {
+        page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+		page-break-after: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    	page-break-inside: avoid; /* or 'auto' */
+    }
+	
+	.article-text p {
+		page-break-inside: auto; /* or 'auto' */
+	}
+	
+	figure {
+		page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+		page-break-after: avoid; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    	page-break-inside: avoid; /* or 'auto' */
+	}    
+    
+    
+    .article-text a {
+		box-shadow: none;
+		color: #00FF00;
+	}
+	
+	.article-text a:after { 
+		content: " (" attr(href) ") ";
+		font-family: 'Calibre';
+		color: grey;
+	}
+	
+	
+	/* Images */
+	figure {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	
+	img.image {
+		opacity: 1 !important;
+	}
+	
+	div.image-loaded {
+		width: 60% !important;
+		display: inline-block;
+		background-image: none !important;
+	}
+	
+	.figure-caption {
+		width: 30% !important;
+		padding: 0;
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 30px;
+		margin-top: -3px;
+	}
+    
+	/* To show the whole text */
+	.column {
+		overflow: visible !important;
+		display: inline;
+	}
+	
+	.article-text {
+		min-height: 60% !important;
+		background-color: red !important;
+	}
+	
+	p {
+		widows: 10 !important;
+		orphans: 10 !important;
+	}
+	
+	/* To hide side column */
+	.column.two {
+		display: none;
+	}
+	
+	/* Hide nav */
+	.ha-hidden {
+		display: none;
+	}
+	
+	.article-header, .article-text, .article-author-bio, .fixedscrollableparent, .footnotes-title {
+		margin-left: 2cm !important;
+		width: 70% !important; /* It controls the width of the text */
+		/*height: 90% !important;*/
+		/*float: none !important;*/
+		background: transparent;
+	}
+	
+	.article-header {
+		margin-bottom: 130px;
+	}
+	
+	.fixedscrollableparent {
+		position: relative !important;
+		bottom: 0 !important;
+		page-break-inside: avoid !important;
+		padding: 0 !important;
+	}
+	
+	.footnote {
+    	margin-bottom: 20px;
+	}
+
+	.footnotes-title {
+		display: block !important;
+		margin-bottom: -55px !important;
+		font-weight: 600 !important;
+	}
+	
+	/* Footer */
+	/*#footer {
+		position: fixed !important; 
+		display: block !important;
+		bottom: 3mm !important;
+		left: 75% !important;
+		width: 20% !important;
+		text-overflow: initial;
+    	white-space: normal;
+    	overflow: auto;
+	}
+
+	.article-footer-page-counter:before {
+    	counter-increment: pages;
+    	content: counter(page) " / " counter(pages);
+	}*/
+	
+
+
+	
+}

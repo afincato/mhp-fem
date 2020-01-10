@@ -1,0 +1,830 @@
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+#viewer {
+	animation: fadein 2s;
+}
+
+br {
+	display: none;
+}
+
+html, body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+
+	font-family: 'Calibre';
+	font-size: 16px;
+	font-weight: normal;
+
+	color: #000000;
+	vertical-align: baseline;
+}
+
+body {
+	overflow-y: hidden;
+	animation: fadein 1s;
+	-moz-font-feature-settings: "liga", "kern";
+	-moz-font-feature-settings:"liga=1, kern=1";
+	-ms-font-feature-settings:"liga", "kern";
+	-o-font-feature-settings:"liga", "kern";
+	-webkit-font-feature-settings:"liga", "kern";
+	font-feature-settings: "liga", "kern";
+	font-stretch: normal;
+}
+
+::-webkit-scrollbar {
+	height: 0.5em;
+	width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+	background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+}
+
+.fade-out{
+	animation: fadeout 0.5s !important;
+}
+
+* {
+	outline: 0;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: #0000FF;
+}
+
+::selection {
+    color: #0000FF;
+}
+
+:focus {
+   outline: none;
+}
+
+/* H */
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+}
+
+h1, .highlightArticle .quote, .article-title-introduction, .introductionEdition-year {
+	font-size: 2.6em;
+	line-height: 1.12em;
+}
+
+h2 {
+	font-weight: normal;
+	margin-top: 60px;
+	margin-bottom: 12px;
+	/* check also .article-text */
+}
+
+
+/* TO HIDE SMALL TITLES */
+.navigationEdition em/*, .readinglist em*/ {
+	display: none;
+}
+
+.navigationEdition:first-child, .readinglist:first-child {
+	margin-top: 60px;
+}
+/* TO HIDE SMALL TITLES */
+
+
+/* Navigation */
+nav {
+	position: fixed;
+	background: #FFFFFF;
+	height: 60px;
+	width: 100%; /* Before 98.5% */
+	box-shadow: 0px 10px 5px #FFFFFF;
+	vertical-align: middle;
+	padding-top: 0.07em;
+	z-index: 1;
+	letter-spacing: 0.03em;
+	box-sizing: border-box;
+}
+
+.nav-openset {
+	font-family: 'WebFontFont';
+	font-weight: bold;
+	font-size: 1.2em;
+	line-height: 1em;
+	padding-left: 0.45em;
+	letter-spacing: -0.01em;
+}
+
+.logo {
+	display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-reader {
+	font-family: 'Lyon Display Web';
+	font-size: 1.12em;
+	letter-spacing: 0.01em;
+	padding-left: 0.15em;
+	color: #000000;
+}
+
+.nav-links, .nav-edition {
+	position: absolute;
+	display: inline-block;
+	left: 20.2%;
+}
+
+.nav-link {
+	font-size: 1.15em;
+	margin-right: 3em;
+	color: #00FF00;
+	text-decoration: none;
+}
+
+.nav-link.inview {
+	color: #000000;
+}
+
+.nav-links .mobile, span.nav-mobile-title.mobile {
+	display: none;
+}
+
+.nav-edition {
+	top: 32px;
+	/*width: calc( 50% - 2.7%);*/
+}
+
+.nav-edition.nav-edition {
+	/*display: none;*/
+}
+
+.nav-edition-title, .nav-edition-year, .nav-edition-year-homepage, .nav-close-footnotes {
+	display: inline-block;
+	font-weight: normal;
+	font-size: 1em; /* Before font-size: 1.15em;*/
+	line-height: 1.2em;
+	letter-spacing: 0.012em;
+	word-spacing: 0.06em;
+	color: #000000;
+}
+
+.nav-edition-title {
+	display: inline;
+}
+
+.nav-edition-title::after {
+	content: ',';
+	margin-right: 10px;
+}
+
+.nav-edition-year {
+	margin-left: -5px;
+}
+
+.nav-hamburger {
+	position: absolute;
+	right: 8px;
+	top: 3px;
+	font-size: 1.23em;
+}
+
+.nav-print {
+	margin-right: 25px;
+}
+
+.nav-edition-year-homepage {
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.nav-close-footnotes {
+	position: absolute;
+	left: 70.6%;
+	top: 32px;
+}
+
+.nav-socialmedia {
+	display: inline-block;
+	margin-top: 0.02em;
+	position: absolute;
+	left: 59%;
+}
+
+.nav-link:hover, .nav-socialmedia a:hover {
+	color: #0000FF;
+}
+
+.nav-socialmedia-button {
+	color: #000000;
+}
+
+.nav-socialmedia-button + .nav-socialmedia-button {
+	margin-left: 13px;
+}
+
+/* To push down all the columns in underneath the main title */
+.navigationEdition, .highlights, .readinglist {
+	margin-top: 60px;
+}
+/* END Navigation */
+
+
+
+
+.scrollable {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	width: calc(100% + 60px);
+	height: 100%;
+	padding-top: 60px;
+	padding-bottom: 70px;
+	padding-right: 60px;
+	box-sizing: border-box;
+}
+
+.fixedscrollableparent {
+	position: fixed;
+	width: 24%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+.fixedscrollable {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+
+	height: 100%;
+	width: calc(100% + 60px);
+	padding-top: 70px;
+	padding-right: 130px; /* previous 60px */
+	box-sizing: border-box;
+}
+
+.unscrollable {
+	padding-top: 120px;
+}
+
+.edition {
+	height: 100%;
+	display: inline-block;
+}
+
+/* Edition header */
+.introductionEdition-title::after {
+	font-weight: normal;
+	content: ', ';
+	margin-right: 6px;
+}
+
+.introductionEdition-title, .introductionEdition-year {
+	display: inline;
+}
+
+.edition-header, .article-title-introduction {
+	margin-bottom: 20px;
+	margin-right: 60px;
+}
+
+/* Edition Home Page */
+ h2, .linkArticle-interviewed, .linkArticle-position, .readinglist em, .linkArticle-title,
+ .highlightArticle .linkArticle-interviewed, .article-quote {
+	font-family: 'Calibre';
+	font-size: 1.73em;
+	line-height: 1.21em;
+	word-spacing: 0.05em;
+	letter-spacing: 0.015em;
+}
+
+.readinglist em, h2 {
+	font-weight: 600;
+}
+
+.navigationArticle .linkArticle-interviewed, .navigationArticle .linkArticle-position {
+	display: inline;
+}
+
+.linkArticle-position::before {
+	content: ' – ';
+}
+
+.edition-cover {
+	/*border: 4px solid #00FF00;*/
+}
+
+/* Editor Contributors */
+.introductionEdition-editor-contributors em, div.navigationEdition em/*, div.readinglist em*/ {
+	font-weight: 600;
+}
+
+.introductionEdition-editor-contributors {
+	margin-top: 30px;
+	margin-left: 35px;
+	margin-right: 35px;
+}
+
+.introductionEdition-contributors {
+	margin-top: 8px;
+}
+/* END Editor Contributors */
+
+
+
+
+/* Article */
+
+.article br {
+	display: none;
+}
+
+.article-header {
+	margin-bottom: 120px;
+}
+
+/* Header in the article based on the Website introduction */
+.article .article-title, .article .article-subtitle, .article .article-author, .article .article-author-info {
+	font-size: 2.6em;
+	line-height: 1.11em;
+	letter-spacing: 0.015em;
+	/*word-spacing: 0.01em;*/
+}
+
+.article-text {
+	font-family: 'Lyon Display Web';
+	font-weight: 300;
+	font-style: normal;
+	margin-top: 30px;
+	margin-bottom: 120px;
+	animation: fadein 1s;
+}
+
+.article-text p, .article-author-bio, .readinglist-item-header, .article-source,
+.introductionEdition-editor-contributors, .article-date-location {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	letter-spacing: 0.022em;
+	word-spacing: 0.06em;
+}
+
+.article-author-info {
+	display: none;
+}
+
+/* exception */
+.article-text p + .article-quote {
+	margin-top: 55px;
+	/*margin-top: 45px;*/
+}
+
+.article-text p + p, .introductionEdition-introduction p + p, .interview + p {
+	margin-top: 20px;
+}
+
+.article a, .footnote-text a {
+	text-decoration: none;
+	color: #000000;
+	position: relative;
+	box-shadow: inset 0 -2px #00FF00;
+}
+
+.article a:hover, .footnote-text a:hover {
+	color: #0000FF;
+	box-shadow: inset 0 -2px #0000FF;
+	cursor: pointer;
+}
+
+.article em, .footnote-text em {
+	font-style: oblique;
+	letter-spacing: 0.028em;
+	word-spacing: 0.09em;
+}
+
+img {
+	width: 100%;
+}
+
+.article-title, .linkArticle-title, .readinglist-title {
+	font-family: 'Lyon Display Web';
+	font-weight: 300;
+	letter-spacing: 0.015em;
+	word-spacing: 0.05em;
+	color: #00FF00;
+}
+
+/* interview */
+.interview {
+	margin-left: 35px;
+}
+
+.interview-voice {
+	font-family: 'Calibre';
+	font-weight: 600;
+	font-size: 0.75em;
+	margin-top: 0.6em;
+	margin-left: -35px;
+	margin-right: 7px;
+	float: left;
+}
+
+.interview-question {
+	margin-top: 35px;
+}
+
+figure + .interview-question, h2 + .interview p.interview-question {
+	margin-top: 0px;
+}
+
+.interview-answer {
+	margin-bottom: 5px;
+}
+
+/* Question has the same style of the main text */
+
+/* Answer */
+p.interview-answer, /*.readinglist-quote,*/
+p.article-author-bio, .about, .readinglist-homepage-item, .readinglist-item,
+.article-source {
+	font-family: 'Calibre';
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: 0.015em;
+	word-spacing: 0.05em;
+}
+
+/* Date/Location – Numbers need a different letter spacing */
+.article-date-location {
+	font-family: 'Calibre';
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: 0.025em;
+	word-spacing: 0.05em;
+}
+
+/* figure */
+figure {
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+figure + figure {
+	margin-top: 0;
+}
+
+figure img {
+	margin-bottom: 10px;
+}
+
+.figure-caption {
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+}
+
+.caption, .linkArticle-type, .introductionEdition-author, /*.article-source,*/
+.introductionEdition-author-position, .navigationEdition em {
+	font-family: 'Calibre';
+	font-weight: normal;
+	font-size: 1em; /* Before 1.06em */
+	line-height: 1.3em;
+	letter-spacing: 0.02em;
+	word-spacing: 0.12em;
+}
+
+/* quote */
+p.article-quote {
+	font-family: 'Calibre';
+	font-weight: normal;
+	font-size: 1.73em;
+	line-height: 1.21em;
+	word-spacing: 0.05em;
+	letter-spacing: 0.015em;
+	height: auto;
+	padding-left: 35px;
+	margin-top: 55px;
+	margin-bottom: 55px;
+	/*margin-top: 45px;*/
+	/*margin-bottom: 45px;*/
+}
+
+/* Text source */
+.article-source, .article-date-location {
+	margin-top: 80px;
+	margin-bottom: 50px;
+}
+
+/* Date/Location */
+.article-source + .article-date-location {
+	margin-top: -35px;
+}
+
+/* OS voice */
+/* Calibre doesn't have oblique, single quotation marks are used instead */
+/* em style needs to be overwritten otherwise will force the oblique from another typeface */
+/* voice-OS is also the style for the About in the home page but it has an exception in the style check .scrollable .voice-OS */
+/* p.voice-OS, .voice-OS em { */
+p.voice-OS {
+	font-family: 'Calibre';
+	font-weight: 600;
+	/*margin-top: 60px;*/
+	margin-bottom: 40px;
+	margin-left: -35px;
+	line-height: 1.4em;
+}
+/* Exception to avoid the negative margin-left */
+.scrollable .voice-OS {
+	margin-left: 0px;
+	font-size: 1.2em;
+	line-height: 1.4em;
+	letter-spacing: 0.015em;
+	word-spacing: 0.05em;
+}
+
+.voice-OS em:before, .article-text-about em:before {
+	content: "\2018";
+}
+
+.voice-OS em:after, .article-text-about em:after {
+	content: "\2019";
+}
+
+/* bio bottom page */
+.article-author-bio {
+	margin-bottom: 70px;
+}
+
+/* article info */
+.article-author + .article-edition, .article-subtitle + .article-author {
+	margin-top: 15px;
+}
+
+/* Footnotes */
+/* Number */
+span.footnote-ref {
+	font-family: 'Calibre';
+	font-weight: normal;
+	font-size: 0.9em;
+	line-height: 1em;
+	color: #00FF00;
+	margin-right: 0.1em;
+	margin-left: 0.05em;
+}
+
+.footnotes span.footnote-ref {
+	margin-right: 20px;
+}
+
+.footnote-ref:hover, .footnote-ref:hover::before, .footnote-ref:hover::after,
+.nav-print:hover, .ha-visible span.nav-link:hover, .ha-visible .nav-socialmedia a:hover  {
+	color: #0000FF;
+	outline: 0;
+	cursor: pointer;
+}
+
+.footnote-ref::before {
+	content: '[';
+	word-spacing: 0.05em;
+	color: #00FF00;
+}
+
+.footnote-ref::after {
+	content: ']';
+	word-spacing: 0.05em;
+	color: #00FF00;
+}
+
+/* Text Footnotes */
+.footnotes {
+	font-family: 'Calibre';
+	font-weight: normal;
+	font-size: 1.06em;
+	line-height: 1.35em;
+	letter-spacing: 0.02em;
+	word-spacing: 0.02em;
+}
+
+.footnote {
+	margin-bottom: 40px;
+}
+
+span.footnote-ref {
+	display: inline;
+}
+
+.comment {
+	color: #FF0000;
+	font-family: 'Calibre';
+	font-weight: normal;
+
+	display: block;
+	padding-left: 20px;
+	border-left: 2px solid #FF0000;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* END Article */
+
+
+
+
+/* Home page */
+/* TOC */
+
+/* introduction with only 1 item in the edition */
+.introductionEdition-introduction {
+	font-family: 'Lyon Display Web';
+	font-weight: 300;
+	margin-top: 2em;
+	margin-bottom: 8px;
+	font-size: 1.23em;
+	line-height: 1.4em;
+	letter-spacing: 0.015em;
+	word-spacing: 0.06em;
+}
+
+.introductionEdition-author {
+	margin-top: 10px;
+}
+
+.imagecolumn {
+	padding-bottom: 60px;
+}
+
+.navigationEdition h4, .imagecolumn h4, .readinglist h4, .tableofcontents-reader h4 {
+	font-weight: 600;
+}
+
+.navigationArticle {
+	margin-top: 20px;
+	margin-bottom: 40px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.edition .cover .article {
+	margin-bottom: 40px;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+/* Highlights */
+.highlights {
+	margin-bottom: 90px;
+}
+.highlightArticle {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.highlightArticle.clickable {
+/* .clickable includes article title and author(s) */
+	margin-bottom: 90px;
+}
+
+.highlightArticle .quote {
+/* font-size look at h1 */
+	line-height: 1.05em; /* The same font-size has a different line-height on the home page – the size is from the unveiled sentence */
+	letter-spacing: 0.015em;
+	word-spacing: 0.05em;
+	margin-bottom: 20px;
+}
+
+.highlightArticle .quote::before {
+	content: "\201C";
+	margin-right: 3px;
+}
+
+.highlightArticle .quote::after {
+	content: "\201D";
+	margin-left: 3px;
+}
+
+/*.highlightArticle .linkArticle-interviewed,*/ .readinglist-homepage-title,
+.readinglist-homepage-subtitle {
+	font-size: 1.2em; /* Before 1.3 */
+	line-height: 1.21em;
+	letter-spacing: 0.015em;
+	word-spacing: 0.05em;
+}
+
+img.image {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	display: block;
+}
+
+img.image.loaded {
+	opacity: 1;
+	animation: fadein 1s;
+	margin: 0px;
+}
+
+.image-loading {
+	width: 100%;
+	padding-top: 66%;
+}
+
+.edition-cover .image-loaded {
+	margin-bottom: 0px;
+}
+
+.image-loaded {
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin-bottom: 20px;
+}
+
+/* Different margin in TOC column */
+.linkArticle-title + .linkArticle-interviewed {
+	margin-top: 0;
+}
+
+
+
+/* Reading list Homepage */
+.readinglist-homepage-item {
+	margin-top: 20px;
+	margin-bottom: 35px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.readinglist-homepage-title {
+	color: #00FF00;
+}
+
+/* Readinglist Article */
+.readinglist-quote {
+	display: block;
+	margin-top: 10px;
+}
+
+.readinglist-item-author, .readinglist-year, .readinglist-item-header {
+	font-family: 'Calibre';
+	font-weight: normal;
+}
+
+.readinglist-item-header {
+	margin-top: 65px;
+}
+
+.readinglist-item-header .readinglist-title:after {
+	content: '. ';
+	color: #000000;
+}
+
+.readinglist-item-header .readinglist-year:before {
+	content: '(';
+}
+
+.readinglist-item-header .readinglist-year:after {
+	content: '). ';
+}
+
+.readinglist-item-header .readinglist-item-author::after{
+	content: ' ';
+}
+
+/*embeds*/
+
+.embed {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Print */
+.article-header-print, #footer, .footnotes-title {
+	display: none;
+}
