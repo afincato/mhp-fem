@@ -1,0 +1,239 @@
+var $ = jQuery.noConflict();
+
+	var findActiveTab = function(){
+
+		var tab = $('section.contributors-1 .container-2 .author-posts');
+		var authorID = window.location.hash;
+
+		if (authorID.length > 0 && tab.length > 0) {
+
+			tab.each(function(){
+				if ("#"+$(this).attr('id') == authorID) {
+					$(this).removeClass('folded').addClass('unfolded');
+				};
+			});
+		};
+
+	};		
+
+
+$(document).ready(function() {
+
+
+	$(".single-post article blockquote").each(function() {
+
+		var content = $(this).find("p").text();
+
+		var url = window.location.href;
+
+		$(this).append("<a href='https://twitter.com/intent/tweet?&amp;text=" + content + "&amp;url=" + url + "' class='tweet' target='_blank'></a>");
+
+	});
+
+
+
+	$(".divider.foldable.folded").each(function(){
+
+		$(this).siblings(".row").slideUp({
+
+			easing: "linear"
+
+		});
+
+	})
+
+
+
+	$(".divider.foldable").click(function(e) {
+
+		e.preventDefault();
+
+		var that = $(this);
+
+		$(".divider.foldable").each(function() {
+
+			if ($(this)[0] != that[0]) {
+
+				$(this).removeClass('unfolded');
+
+				$(this).addClass('folded');
+
+				$(this).siblings(".row").slideUp({
+
+					easing: "linear"
+
+				});
+
+			}
+
+		});
+
+		if ($(this).hasClass('folded')){
+
+			$(this).removeClass('folded');
+
+			$(this).addClass('unfolded');
+
+		}
+
+		else{
+
+			$(this).removeClass('unfolded');
+
+			$(this).addClass('folded');
+
+		}
+
+
+
+		$(this).siblings('.row').slideToggle({
+
+			easing: "linear"
+
+		});
+
+	});
+
+
+
+	$(".author-posts.folded .post-link:nth-child(n+2)").slideUp({
+
+		easing: "linear"
+
+	});
+
+
+
+	$(".author-posts .about h4 a").click(function(e) {
+
+		e.preventDefault();
+
+		var that = $(this);
+
+
+
+		if ($(this).closest('.author-posts').hasClass('unfolded')) {
+
+			$(this).closest('.author-posts').removeClass('unfolded');
+
+			$(this).closest('.author-posts').addClass('folded');
+
+		}
+
+
+
+		else {
+
+			$(this).closest('.author-posts').removeClass('folded');
+
+			$(this).closest('.author-posts').addClass('unfolded');
+
+
+
+			$(this).closest('.author-posts').siblings('.author-posts').each(function() {
+
+				if ($(this) != that) {
+
+					$(this).removeClass('unfolded');
+
+					$(this).addClass('folded');
+
+
+
+					$(this).find('.post-link:nth-child(n+2)').each(function(){
+
+						$(this).slideUp({
+
+							easing: "linear"
+
+						});
+
+					});
+
+				}
+
+			});
+
+		}
+
+
+
+		$(this).closest('.author-posts').find('.post-link:nth-child(n+2)').each(function(){
+
+			$(this).slideToggle({
+
+				easing: "linear"
+
+			});
+
+		});
+
+	});
+
+		$('header a.search').click(function(event) {
+		event.preventDefault();
+		$('.header-search').slideToggle();
+	});
+
+	$('footer a.search').click(function(event) {
+		event.preventDefault();
+		$('.footer-search').slideToggle();
+	});
+
+});
+
+
+
+$(window).load(function() {
+
+
+
+	$(".single-post article p sup span").each(function() {
+
+		var height = $(this).height();
+
+		$(this).css('top', ($(this).parent('sup').offset().top - $(this).closest('p').offset().top) + 'px');
+
+		if (($(this).parent("sup").offset().top + height) > ($(this).closest('article').offset().top + $(this).closest('article').height())) {
+
+			$(this).css('top', "auto");
+
+			$(this).css('bottom', "0");
+
+		}
+
+
+
+		else {
+
+			$(this).css('bottom', "auto");
+
+		}
+
+	});
+
+	var previous = $('.single-post .meta');
+
+	$(".single-post article p sup span").each(function(index) {
+
+		if (previous != 0) {
+
+			if (($(this).offset().top < (previous.offset().top + previous.height())) && $(this).css('top') != 'auto') {
+
+				$(this).css('top', (parseInt($(this).css('top')) + (previous.offset().top + previous.height()) - $(this).offset().top + 15) + "px");
+
+				$(this).css('bottom', "auto");
+
+			}
+
+		}
+
+		previous = $(this);
+
+	});
+
+	$(".single-post article p sup span").removeClass('loading');
+
+	findActiveTab();
+
+});
