@@ -1,0 +1,23 @@
+.blogEntryContentWrapper {
+	overflow:hidden;
+	max-height:622px; /* 1.5 times expected average image height, 415 */
+	position:relative;
+}
+
+.blogEntryReadMoreVeil {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background:linear-gradient( to top, rgba( 240, 248, 255, 1 ) 0%, rgba( 240, 248, 255, 0 ) 24px, rgba( 240, 248, 255, 0 ) 100% );
+	display:none;
+	z-index:10;
+}
+
+.readMoreButton {
+	display:none;
+	cursor:pointer;
+	margin-top:8px;
+	font-weight:bold;
+}
