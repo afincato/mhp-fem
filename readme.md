@@ -2,7 +2,8 @@
 
 set of “self-contained” html pages to use with custom design and code, as a way to prototype final mockup for the frontend side of the [platform2platform](https://github.com/afincato/platform-2-platform) project.
 
-process:
+## process
+
 - webpage scraping
 - custom design
 - custom js to talk with mhp-p2p database
