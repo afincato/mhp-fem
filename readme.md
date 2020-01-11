@@ -1,4 +1,8 @@
-# maak het publiek platform 2 platform, frontend embedded mockups
+# mhp-p2p: frontend embedded mockups
+
+set of “self-contained” html pages to use with custom design and code, as a way to prototype final mockup for the frontend side of the [platform2platform](https://github.com/afincato/platform-2-platform) project.
+
+## notes
 
 refs:
 - [make offline mirror of a site using wget](https://www.guyrutenberg.com/2014/05/02/make-offline-mirror-of-a-site-using-wget/)
