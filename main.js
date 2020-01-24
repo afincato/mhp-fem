@@ -67,6 +67,10 @@ function create_block (data) {
 
 }
 
+function add_to_page (data) {
+
+}
+
 ; // to make sure anon async func works
 
 //-- main func
@@ -75,7 +79,7 @@ function create_block (data) {
     const article = await get_article(query) 
     console.log(article)
 
-    // add to page func
+    // add to page 
 
   } catch (e) {
     throw e
