@@ -22,6 +22,13 @@ eg
 wget -mkEpnp --wait=5 <url>
 ```
 
+
+this is not recursive and download a single (sub-)page and related assets
+
+``` bash
+wget -m -np -p https://amateurcities.com/no-happy-endings/
+```
+
 the `wget` command works for `amateur-cities` as well as `online-open`. `open-set-reader` is a javascript single page application, therefore there’s just one `index.html` file and some javascript rendering everything.
 
 to scrape this, a very basic but effective approach — if the numbers of pages is small (eg 5 in our case) — is to combine `wget` with Firefox `Save Page As > Web Page, Complete`, and manually (or programmatic) merge data from both sides. 
