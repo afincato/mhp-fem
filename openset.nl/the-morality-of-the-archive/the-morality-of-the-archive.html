@@ -1,332 +1,367 @@
 <!DOCTYPE html>
 <html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>Open Set Reader - The Morality of the Archive</title>
-		<meta name="description" content="Tiiu Meiner">
-		<meta name="author" content="Tiiu Meiner">
-		<meta name="keywords" content="">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Open Set Reader - The Morality of the Archive</title>
+    <meta name="description" content="Tiiu Meiner">
+    <meta name="author" content="Tiiu Meiner">
+    <meta name="keywords" content="">
 
 
-		<link rel="apple-touch-icon" sizes="57x57" href="http://openset.nl/img/favicons/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="http://openset.nl/img/favicons/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="http://openset.nl/img/favicons/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="http://openset.nl/img/favicons/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="http://openset.nl/img/favicons/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="http://openset.nl/img/favicons/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="http://openset.nl/img/favicons/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="http://openset.nl/img/favicons/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="http://openset.nl/img/favicons/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="http://openset.nl/img/favicons/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="http://openset.nl/img/favicons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="http://openset.nl/img/favicons/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="http://openset.nl/img/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="http://openset.nl/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="http://openset.nl/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://openset.nl/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://openset.nl/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://openset.nl/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://openset.nl/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://openset.nl/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://openset.nl/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://openset.nl/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="http://openset.nl/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://openset.nl/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="http://openset.nl/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://openset.nl/img/favicons/favicon-16x16.png">
 
-		<!-- Responsive -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
-		<!-- Style -->
-		<link rel="stylesheet" href="../assets/css/responsive.css">
-		<link rel="stylesheet" href="../assets/css/style.css">
-		<link rel="stylesheet" href="../assets/css/cms.css">
-		<link rel="stylesheet" href="../assets/css/print.css" media="print">
-
-
-		<!-- Typography -->
-		<link rel="stylesheet" type="text/css" href="../assets/css/font.css">
-		<link rel="stylesheet" type="text/css" href="../assets/css/ffmark.css">
-		<link href="../assets/css/css.css" rel="stylesheet">
-
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="../assets/css/font-awesome.css">
-
-		<!-- Icon Icomoon -->
-		<link rel="stylesheet" href="../assets/icomoon/icomoon.css">
-
-		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="http://openset.nl/img/favicon.png">
+    <!-- Style -->
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/cms.css">
+    <link rel="stylesheet" href="../assets/css/print.css" media="print">
 
 
-	</head>
-	<body><nav class="ha-hidden"><a href="#!/" class="logo clickable"><span class="nav-openset">open set </span><span class="nav-reader">reader</span></a><div class="nav-links"><span class="nav-mobile-title mobile">Editions</span><span class="nav-link clickable ha-hidden">2018</span><span class="nav-link clickable ha-hidden">2017</span><span class="nav-link clickable ha-hidden">2016</span><span class="nav-link clickable margin-top ha-hidden">About</span><span href="http://openset.nl/index.php" class="nav-link clickable mobile margin-top ha-hidden">Home Page</span></div><div class="nav-socialmedia ha-hidden"><i class="fa nav-print fa-print"></i><a href="https://www.facebook.com/opensetschool/" target="_blank" class="nav-socialmedia-button clickable"><i aria-hidden="true" class="fa fa-facebook-official"></i></a><a href="https://www.flickr.com/photos/106312316@N07/albums/with/72157665498796163" target="_blank" class="nav-socialmedia-button clickable"><i aria-hidden="true" class="fa fa-flickr"></i></a><a href="https://www.flickr.com/photos/106312316@N07/albums/with/72157665498796163" target="_blank" class="nav-socialmedia-button clickable"><i aria-hidden="true" class="fa fa-instagram"></i></a></div><div class="nav-edition clickable ha-hidden"><span class="nav-edition-title">Memories of the Future vol. II</span><span class="nav-edition-year">2017</span></div><div class="nav-hamburger clickable"><i aria-hidden="true" class="fa fa-bars"></i></div></nav><div id="fullscreen" class="fullscreen-wrapper"><div class="fullscreen"><div id="footer"><p class="article-footer-title">The Morality of the Archive</p><p class="article-footer-subtitle">Tiiu Meiner</p><p class="article-footer-page-counter">Tiiu Meiner</p></div><div class="column two responsive"></div><div class="column six overflow-selection"><div class="unscrollable"><div class="article"><div class="article-header"><div class="article-header-print"><div class="logo-header-print"><span class="nav-openset">open set </span><span class="nav-reader">reader</span></div><div class="edition-print"><span class="nav-edition-title">Memories of the Future vol. II</span><span class="nav-edition-year">2017</span></div></div><div class="article-title">The Morality of the Archive</div><div class="article-subtitle">Tiiu Meiner</div><div class="article-author">Tiiu Meiner</div><div class="article-author">Interview with Annette Behrens</div><div class="article-author-info">Artist</div><div class="article-date-location">9 November 2017, in person, Behrens’ studio, Rotterdam, NL
-</div></div><div class="article-text"><p>In a world of information 
-abundance, the contextualisation of images and stories is an arduous 
-task. The sheer amount of available content from archives, the internet 
-and mainstream media has created an intimidating platform that expects 
-individuals to stay turned on and ever attentive.
-</p><p> 
-I met Annette Behrens in her studio in Rotterdam. The empty halls of the
- building emanated an inviting calm, and as Behrens put the kettle of 
-hot water to boil for some green tea in her studio, it became clear that
- this was her haven away from the chaos that is the archive. Behrens is 
-an artist who deals with the bountiful amounts of archival materials by 
-weaving personal narratives into photography, video and text to produce 
-printed publications and projects. Behrens is interested in the ‘other’ 
-and how commonly-held perspectives of groups that deviate from the norm 
-come to be. Her work asks: how are groups and individuals portrayed once
- subjected to the archive and how is this helpful? Are there new 
-perspectives to be uncovered and considered?
+    <!-- Typography -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/font.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/ffmark.css">
+    <link href="../assets/css/css.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../assets/css/font-awesome.css">
+
+    <!-- Icon Icomoon -->
+    <link rel="stylesheet" href="../assets/icomoon/icomoon.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="http://openset.nl/img/favicon.png">
+
+    <!-- Platform 2 Platform -->
+    <link rel='stylesheet' href='../../src/css/mhp-style.css' type='text/css' media='all' />
+
+</head>
+<body><nav class="ha-hidden"><a href="#!/" class="logo clickable"><span class="nav-openset">open set </span><span class="nav-reader">reader</span></a><div class="nav-links"><span class="nav-mobile-title mobile">Editions</span><span class="nav-link clickable ha-hidden">2018</span><span class="nav-link clickable ha-hidden">2017</span><span class="nav-link clickable ha-hidden">2016</span><span class="nav-link clickable margin-top ha-hidden">About</span><span href="http://openset.nl/index.php" class="nav-link clickable mobile margin-top ha-hidden">Home Page</span></div><div class="nav-socialmedia ha-hidden"><i class="fa nav-print fa-print"></i><a href="https://www.facebook.com/opensetschool/" target="_blank" class="nav-socialmedia-button clickable"><i aria-hidden="true" class="fa fa-facebook-official"></i></a><a href="https://www.flickr.com/photos/106312316@N07/albums/with/72157665498796163" target="_blank" class="nav-socialmedia-button clickable"><i aria-hidden="true" class="fa fa-flickr"></i></a><a href="https://www.flickr.com/photos/106312316@N07/albums/with/72157665498796163" target="_blank" class="nav-socialmedia-button clickable"><i aria-hidden="true" class="fa fa-instagram"></i></a></div><div class="nav-edition clickable ha-hidden"><span class="nav-edition-title">Memories of the Future vol. II</span><span class="nav-edition-year">2017</span></div><div class="nav-hamburger clickable"><i aria-hidden="true" class="fa fa-bars"></i></div></nav><div id="fullscreen" class="fullscreen-wrapper"><div class="fullscreen"><div id="footer"><p class="article-footer-title">The Morality of the Archive</p><p class="article-footer-subtitle">Tiiu Meiner</p><p class="article-footer-page-counter">Tiiu Meiner</p></div><div class="column two responsive"></div><div class="column six overflow-selection"><div class="unscrollable"><div class="article"><div class="article-header"><div class="article-header-print"><div class="logo-header-print"><span class="nav-openset">open set </span><span class="nav-reader">reader</span></div><div class="edition-print"><span class="nav-edition-title">Memories of the Future vol. II</span><span class="nav-edition-year">2017</span></div></div><div class="article-title">The Morality of the Archive</div><div class="article-subtitle">Tiiu Meiner</div><div class="article-author">Tiiu Meiner</div><div class="article-author">Interview with Annette Behrens</div><div class="article-author-info">Artist</div><div class="article-date-location">9 November 2017, in person, Behrens’ studio, Rotterdam, NL
+</div></div><div class="article-text"><p>In a world of information
+    abundance, the contextualisation of images and stories is an arduous
+    task. The sheer amount of available content from archives, the internet
+    and mainstream media has created an intimidating platform that expects
+    individuals to stay turned on and ever attentive.
+</p><p>
+    I met Annette Behrens in her studio in Rotterdam. The empty halls of the
+    building emanated an inviting calm, and as Behrens put the kettle of
+    hot water to boil for some green tea in her studio, it became clear that
+    this was her haven away from the chaos that is the archive. Behrens is
+    an artist who deals with the bountiful amounts of archival materials by
+    weaving personal narratives into photography, video and text to produce
+    printed publications and projects. Behrens is interested in the ‘other’
+    and how commonly-held perspectives of groups that deviate from the norm
+    come to be. Her work asks: how are groups and individuals portrayed once
+    subjected to the archive and how is this helpful? Are there new
+    perspectives to be uncovered and considered?
 </p><p>At Open Set Lab 2017, Behrens spoke about her collaborative project  <a href="https://vimeo.com/141573791" target="_blank"><em>(In Matters of) Karl</em></a>, a print publication that documents the results of her investigation into the  <a href="https://en.wikipedia.org/wiki/H%C3%B6cker_Album" target="_blank">Höcker Album</a>
-  — a photo-album anonymously gifted to the United States Holocaust 
-Memorial Museum in 2007 that depicts the ‘everyday’ activities of Nazi 
-officers working in Polish concentration camps during the Second World 
-War. Due to her German heritage, Behrens was fascinated by the new 
-perspectives and issues this photo album unwittingly reveals to the 
-public.
+    — a photo-album anonymously gifted to the United States Holocaust
+    Memorial Museum in 2007 that depicts the ‘everyday’ activities of Nazi
+    officers working in Polish concentration camps during the Second World
+    War. Due to her German heritage, Behrens was fascinated by the new
+    perspectives and issues this photo album unwittingly reveals to the
+    public.
 </p>
-<figure>
-  <div style="background-image: url(&quot;pattern3.png&quot;);" class="image-loaded">
-    <img src="../assets/imgs/5a68c78995ae9-AB_1-sm.jpg" class="image loaded">
-  </div>
-  <div class="figure-caption"><span class="caption">Annette Behrens, <em>In Matters of (Karl)</em> [Fw:Books, 2015] cover design by Hans Gremmen
+    <figure>
+        <div style="background-image: url(&quot;pattern3.png&quot;);" class="image-loaded">
+            <img src="../assets/imgs/5a68c78995ae9-AB_1-sm.jpg" class="image loaded">
+        </div>
+        <div class="figure-caption"><span class="caption">Annette Behrens, <em>In Matters of (Karl)</em> [Fw:Books, 2015] cover design by Hans Gremmen
   </span></div>
-</figure>
-<div class="interview"><span class="interview-voice">Tiiu Meiner</span><p class="interview-question">Where does your interest in exploring the idea of the ‘other’ come from?</p></div><div class="interview"><span class="interview-voice">Annette Behrens</span><p class="interview-answer">I
- grew up in Germany and I lived there until I was about 21 years old. My
- dad grew up in the 1940s and was always telling me stories about the 
-Second World War. He grew up in the midst of the war but was very young.
- After the war ended, it was too immediate a history to recount, so 
-people wouldn’t talk about it. He didn’t learn about the war in school, 
-and grew up proud to be German because of the other aspects of German 
-history, and the culture, the writers and musicians they were taught 
-about instead. Later, he found out about what the same Germany that he 
-was proud to be a part of, was also capable of. 
-</p></div><div class="interview"><p class="interview-answer">I think my 
-father’s realisation influenced me a lot. Now we are confronted with all
- that history, all the time. It’s something that was always part of my 
-schooling and education. It’s something you became extremely aware of 
-when travelling abroad. I would, for a really long time, and it’s only 
-changed in the last few years, be really embarrassed to say I was from 
-Germany because that horrific history was such an immense part of what I
- grew up with.
-</p></div><div class="interview"><p class="interview-answer">How we look
- at each other, via photography and the media, can influence our 
-perspective of one another and how we think a person should be treated. 
-You see this in the history of the Second World War and how far that 
-influence can go. This is the starting point for my work.</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">How do you identify a group as ‘other’?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">In the first instance, intuitively. 
-</p></div><div class="interview"><p class="interview-answer">Then you 
-slowly begin to understand, ‘this is what I have been interested in’. 
-I’m a lot more aware of this now, and especially the role that 
-photography plays in my work, and of how we exclude people or simplify 
-information. And, in recent years, how the gaps in our historical 
-writing have become more evident. 
-</p></div><div class="interview"><p class="interview-answer">If you look
- at the Netherlands right now and which voices are missing within the 
-history that we are writing through the archive, it’s a really important
- discussion — that everything we keep is only a part of something; it’s 
-always fragments. For a really long time I don’t even think there was an
- acknowledgement in the public sphere that it’s only fragments we’re 
-keeping, and that there are that many more voices that also should also 
-be included.</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">What is your process for researching these groups you’ve identified as being ‘outside of the norm’?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">It’s
- always very broad, which can be a little frustrating. I try to include 
-all the layers I’m interested in, which takes a lot of time to research 
-and investigate. <a href="http://www.annettebehrens.com/soymain.html" target="_blank">The project that I’m working on now is about the soybean</a>,
- because I recently changed my diet and became very enthusiastic about 
-it. Then I thought, ‘How could I use this in my work as a visual 
-artist?’. It was with this thought that I identified the soybean as a 
-topic that’s very controversial. People are often either very positive 
-or very negative about it. This plant and how we view it fits right into
- what I’m interested in. So, after this kind of realisation I become 
-fascinated by a topic and can get buried in it. I always try to have 
-different types of information sitting next to each other, and then find
- a way to make it accessible for somebody else. </p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">Do you do a lot of field work?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">Yes,
- usually. I’ve travelled a lot within the Netherlands, and I just came 
-back from the US where I was at the Henry Ford archive. Henry Ford did 
-extensive research on the soybean in the 1940s. I hope to go to Brazil 
-in 2018. I was in the US three years ago. It’s one of the biggest 
-international producers of soy. I visited at the research lab at the 
-  University of Illinois, and places like that. </p></div>
-<figure>
-  <div style="background-image: url(&quot;pattern2.png&quot;);" class="image-loaded">
-    <img src="../assets/imgs/5a68c7cc5d6da-AB_4.jpg" class="image loaded">
-  </div>
-  <div class="figure-caption"><span class="caption">Photo of the archive from Annette Behrens, <em>In Matters of (Karl)</em> [Fw:Books, 2015] as Behrens researched material for the book.
+    </figure>
+    <div class="interview"><span class="interview-voice">Tiiu Meiner</span><p class="interview-question">Where does your interest in exploring the idea of the ‘other’ come from?</p></div><div class="interview"><span class="interview-voice">Annette Behrens</span><p class="interview-answer">I
+        grew up in Germany and I lived there until I was about 21 years old. My
+        dad grew up in the 1940s and was always telling me stories about the
+        Second World War. He grew up in the midst of the war but was very young.
+        After the war ended, it was too immediate a history to recount, so
+        people wouldn’t talk about it. He didn’t learn about the war in school,
+        and grew up proud to be German because of the other aspects of German
+        history, and the culture, the writers and musicians they were taught
+        about instead. Later, he found out about what the same Germany that he
+        was proud to be a part of, was also capable of.
+    </p></div><div class="interview"><p class="interview-answer">I think my
+        father’s realisation influenced me a lot. Now we are confronted with all
+        that history, all the time. It’s something that was always part of my
+        schooling and education. It’s something you became extremely aware of
+        when travelling abroad. I would, for a really long time, and it’s only
+        changed in the last few years, be really embarrassed to say I was from
+        Germany because that horrific history was such an immense part of what I
+        grew up with.
+    </p></div><div class="interview"><p class="interview-answer">How we look
+        at each other, via photography and the media, can influence our
+        perspective of one another and how we think a person should be treated.
+        You see this in the history of the Second World War and how far that
+        influence can go. This is the starting point for my work.</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">How do you identify a group as ‘other’?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">In the first instance, intuitively.
+    </p></div><div class="interview"><p class="interview-answer">Then you
+        slowly begin to understand, ‘this is what I have been interested in’.
+        I’m a lot more aware of this now, and especially the role that
+        photography plays in my work, and of how we exclude people or simplify
+        information. And, in recent years, how the gaps in our historical
+        writing have become more evident.
+    </p></div><div class="interview"><p class="interview-answer">If you look
+        at the Netherlands right now and which voices are missing within the
+        history that we are writing through the archive, it’s a really important
+        discussion — that everything we keep is only a part of something; it’s
+        always fragments. For a really long time I don’t even think there was an
+        acknowledgement in the public sphere that it’s only fragments we’re
+        keeping, and that there are that many more voices that also should also
+        be included.</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">What is your process for researching these groups you’ve identified as being ‘outside of the norm’?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">It’s
+        always very broad, which can be a little frustrating. I try to include
+        all the layers I’m interested in, which takes a lot of time to research
+        and investigate. <a href="http://www.annettebehrens.com/soymain.html" target="_blank">The project that I’m working on now is about the soybean</a>,
+        because I recently changed my diet and became very enthusiastic about
+        it. Then I thought, ‘How could I use this in my work as a visual
+        artist?’. It was with this thought that I identified the soybean as a
+        topic that’s very controversial. People are often either very positive
+        or very negative about it. This plant and how we view it fits right into
+        what I’m interested in. So, after this kind of realisation I become
+        fascinated by a topic and can get buried in it. I always try to have
+        different types of information sitting next to each other, and then find
+        a way to make it accessible for somebody else. </p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">Do you do a lot of field work?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">Yes,
+        usually. I’ve travelled a lot within the Netherlands, and I just came
+        back from the US where I was at the Henry Ford archive. Henry Ford did
+        extensive research on the soybean in the 1940s. I hope to go to Brazil
+        in 2018. I was in the US three years ago. It’s one of the biggest
+        international producers of soy. I visited at the research lab at the
+        University of Illinois, and places like that. </p></div>
+    <figure>
+        <div style="background-image: url(&quot;pattern2.png&quot;);" class="image-loaded">
+            <img src="../assets/imgs/5a68c7cc5d6da-AB_4.jpg" class="image loaded">
+        </div>
+        <div class="figure-caption"><span class="caption">Photo of the archive from Annette Behrens, <em>In Matters of (Karl)</em> [Fw:Books, 2015] as Behrens researched material for the book.
   </span></div></figure>
-<div class="interview"><span class="interview-voice">TM</span><p class="interview-question">What
- are some of the biggest issues that you’ve encountered whilst 
-researching, in terms of ethical concerns or issues around access?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">For the <em>(In Matters of) Karl</em>
- project, it’s about the perpetrators. Generally, people don’t like to 
-look at these photographs. For me, photographs are a mirror to reflect 
-ourselves nowadays, but I also wanted to do justice to the victims. It’s
- about both of these things. I was really careful with the information —
- everything was checked again and again. All the numbers were right. 
-</p></div><div class="interview"><p class="interview-answer">For the  <a href="http://www.annettebehrens.com/boyzmain.html" target="_blank"><em>Boyz</em> | ████</a>
- project about Moroccan youth in the Netherlands, I wanted to do justice
- to those subgroups and to understand what that justice means for them. 
-But, also, to have an almost neutral work, in which the audience is 
-confronted with different perspectives and have to position themselves 
-accordingly.
-</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">Have
- you ever found yourself in a position where you were uncertain whether 
-or not you might be doing more harm to the subject you were researching?
- Have you had to confront the boundary between what types of subject 
-matter should be given a voice and what shouldn’t?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">With the <em>(In Matters of) Karl</em>
- project, the information and images that we see are often so 
-simplified, and that’s what I become afraid of. A singular image can be 
-taken out of context and simplified. You don’t have any control over 
-that. What I’m after is the ability to supply more context and nuance. </p></div><div class="interview"><p class="interview-answer">
-Images, such as those used in the <em>(In Matters of) Karl</em> project,
- have already been used by a lot of different media outlets, and have 
-been put into certain contexts. I want to apply even more background 
-information, and to combine it with my own story and keep the context 
-personal. Then these images don’t simply depict these perpetrators that 
-have committed horrific unimaginable crimes, but help to bring this 
-story back to yourself. It’s no longer removed from your personal 
-experience like when something like this appears in a newspaper. 
-</p></div><div class="interview"><p class="interview-answer">You can 
-relate it to your own experience, your own behaviour and the politics 
-that are going on at the time. The simplification of something, through 
-images, is something I’m both afraid of and fascinated by.</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">How
- do you situate yourself within your relationship to the ‘other’ and the
- ‘norm’? Where do you see yourself within the narratives of your 
-research?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">In the case of the <em>Boyz | ████</em>
- project about Moroccan youth, this was the first time I situated myself
- as the storyteller and could act as a translator for the public to 
-enable them to question what harm images used in the media can do to a 
-group such as the Netherland’s Moroccan youth. 
-</p></div><div class="interview"><p class="interview-answer">Images I 
-used in the publication were sent to me by the boys themselves. Their 
-group was hard to approach because they were so aware of the negative 
-images news media was using to portray them. So, I used the images they 
-used to portray themselves. I did make some of the images, but for me it
- was really important to have their perspective included.
-</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">You
- have received criticism for working with groups that others have deemed
- dangerous. Why do you think it is important to conduct research into 
-perspectives that have been considered as potentially harmful 
-influences?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">AB:
- I hope I can make people question their own perspectives, to create a 
-little more understanding towards each other, but also to highlight how 
-the media uses certain images in dangerous ways when portraying certain 
-groups. 
-</p></div><div class="interview"><p class="interview-answer">There’s one
- particular image that was used in a lot of news stories about 
-aggressive Moroccan youth. That image doesn't appear in the actual work 
-but I oftentimes use it in lectures to show how harmful wrongful use of 
-images can be. It’s a photo where you see a barbed wire fence and group 
-of Moroccan youths with hoodies trying to hide their faces. You see a 
-barracks in the background. It was used extensively in the Dutch media 
-with all these super negative headlines about how to cope with their 
-behaviour. But the photo was actually taken in <a href="http://www.kampwesterbork.nl/en/index.html#/index" target="_blank">Kamp Westerbork</a>,
- a Dutch transition camp where people in the Second World War were be 
-taken to before being moved to camps such as Auschwitz. The boys in the 
-photo were listening to a story by a guide who was a survivor of the 
-camp. There just happened to be photographers there. Some of these 
-youths didn’t want to be photographed, which is everyone’s right. But 
-the context of the photo is almost never mentioned and was entirely 
-different from what was being written about. This case shows how 
-misleading images can be. 
-</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">Taking the <em>(In Matters of) Karl</em> project as an example, to what extent should archivists be shaping moral discourse?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">I
- think the archive definitely has a responsibility, but it’s difficult 
-because there’s also these daily goings-on that happen in the archive, 
-the adding of information, stuff like that. That can be difficult to 
-remember but it’s also a part that needs to be addressed. 
-</p></div><div class="interview"><p class="interview-answer">All 
-archives have different approaches. I’ve just visited one where they 
-were really protective about which images you’re allowed to use and how 
-they’re used. You have to write everything down. It’s understandable, 
-but this also makes it really difficult to have a more open discussion 
-about the images we keep. 
-I wish more archives were more open source. That could lead to the 
-addition of more diverse perspectives on the images that we keep. For me
- the point of the archive is that we have this collective knowledge, and
- collection of images, and that people who are not necessarily part of 
-an institution can contribute. Institutions, not only the individual 
-archivists, have a responsibility to share their images and information 
-and make them accessible for all kinds of people.
-</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">What is your understanding of ‘citizen archives’? Does it help that people now have their own personal archives?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">I
- think it is getting a bit narcissistic, but that’s also interesting. 
-These types of archives are not necessarily included in my research. 
-They can be useful but all those unassigned images can also be 
-confusing. Maybe image makers should have an increased responsibility to
- share their knowledge about what their images and their content can be 
-  used for.</p></div>
-<figure>
-  <div style="background-image: url(&quot;pattern3.png&quot;);" class="image-loaded">
-    <img src="../assets/imgs/5a68c84689ae2-AB_3.jpg" class="image loaded">
-  </div>
-  <div class="figure-caption"><span class="caption"><em>‘Boyz | ████’</em> exhibition in 2010, dealing with the perception of young Moroccan boys in the Netherlands.
+    <div class="interview"><span class="interview-voice">TM</span><p class="interview-question">What
+        are some of the biggest issues that you’ve encountered whilst
+        researching, in terms of ethical concerns or issues around access?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">For the <em>(In Matters of) Karl</em>
+        project, it’s about the perpetrators. Generally, people don’t like to
+        look at these photographs. For me, photographs are a mirror to reflect
+        ourselves nowadays, but I also wanted to do justice to the victims. It’s
+        about both of these things. I was really careful with the information —
+        everything was checked again and again. All the numbers were right.
+    </p></div><div class="interview"><p class="interview-answer">For the  <a href="http://www.annettebehrens.com/boyzmain.html" target="_blank"><em>Boyz</em> | ████</a>
+        project about Moroccan youth in the Netherlands, I wanted to do justice
+        to those subgroups and to understand what that justice means for them.
+        But, also, to have an almost neutral work, in which the audience is
+        confronted with different perspectives and have to position themselves
+        accordingly.
+    </p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">Have
+        you ever found yourself in a position where you were uncertain whether
+        or not you might be doing more harm to the subject you were researching?
+        Have you had to confront the boundary between what types of subject
+        matter should be given a voice and what shouldn’t?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">With the <em>(In Matters of) Karl</em>
+        project, the information and images that we see are often so
+        simplified, and that’s what I become afraid of. A singular image can be
+        taken out of context and simplified. You don’t have any control over
+        that. What I’m after is the ability to supply more context and nuance. </p></div><div class="interview"><p class="interview-answer">
+        Images, such as those used in the <em>(In Matters of) Karl</em> project,
+        have already been used by a lot of different media outlets, and have
+        been put into certain contexts. I want to apply even more background
+        information, and to combine it with my own story and keep the context
+        personal. Then these images don’t simply depict these perpetrators that
+        have committed horrific unimaginable crimes, but help to bring this
+        story back to yourself. It’s no longer removed from your personal
+        experience like when something like this appears in a newspaper.
+    </p></div><div class="interview"><p class="interview-answer">You can
+        relate it to your own experience, your own behaviour and the politics
+        that are going on at the time. The simplification of something, through
+        images, is something I’m both afraid of and fascinated by.</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">How
+        do you situate yourself within your relationship to the ‘other’ and the
+        ‘norm’? Where do you see yourself within the narratives of your
+        research?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">In the case of the <em>Boyz | ████</em>
+        project about Moroccan youth, this was the first time I situated myself
+        as the storyteller and could act as a translator for the public to
+        enable them to question what harm images used in the media can do to a
+        group such as the Netherland’s Moroccan youth.
+    </p></div><div class="interview"><p class="interview-answer">Images I
+        used in the publication were sent to me by the boys themselves. Their
+        group was hard to approach because they were so aware of the negative
+        images news media was using to portray them. So, I used the images they
+        used to portray themselves. I did make some of the images, but for me it
+        was really important to have their perspective included.
+    </p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">You
+        have received criticism for working with groups that others have deemed
+        dangerous. Why do you think it is important to conduct research into
+        perspectives that have been considered as potentially harmful
+        influences?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">AB:
+        I hope I can make people question their own perspectives, to create a
+        little more understanding towards each other, but also to highlight how
+        the media uses certain images in dangerous ways when portraying certain
+        groups.
+    </p></div><div class="interview"><p class="interview-answer">There’s one
+        particular image that was used in a lot of news stories about
+        aggressive Moroccan youth. That image doesn't appear in the actual work
+        but I oftentimes use it in lectures to show how harmful wrongful use of
+        images can be. It’s a photo where you see a barbed wire fence and group
+        of Moroccan youths with hoodies trying to hide their faces. You see a
+        barracks in the background. It was used extensively in the Dutch media
+        with all these super negative headlines about how to cope with their
+        behaviour. But the photo was actually taken in <a href="http://www.kampwesterbork.nl/en/index.html#/index" target="_blank">Kamp Westerbork</a>,
+        a Dutch transition camp where people in the Second World War were be
+        taken to before being moved to camps such as Auschwitz. The boys in the
+        photo were listening to a story by a guide who was a survivor of the
+        camp. There just happened to be photographers there. Some of these
+        youths didn’t want to be photographed, which is everyone’s right. But
+        the context of the photo is almost never mentioned and was entirely
+        different from what was being written about. This case shows how
+        misleading images can be.
+    </p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">Taking the <em>(In Matters of) Karl</em> project as an example, to what extent should archivists be shaping moral discourse?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">I
+        think the archive definitely has a responsibility, but it’s difficult
+        because there’s also these daily goings-on that happen in the archive,
+        the adding of information, stuff like that. That can be difficult to
+        remember but it’s also a part that needs to be addressed.
+    </p></div><div class="interview"><p class="interview-answer">All
+        archives have different approaches. I’ve just visited one where they
+        were really protective about which images you’re allowed to use and how
+        they’re used. You have to write everything down. It’s understandable,
+        but this also makes it really difficult to have a more open discussion
+        about the images we keep.
+        I wish more archives were more open source. That could lead to the
+        addition of more diverse perspectives on the images that we keep. For me
+        the point of the archive is that we have this collective knowledge, and
+        collection of images, and that people who are not necessarily part of
+        an institution can contribute. Institutions, not only the individual
+        archivists, have a responsibility to share their images and information
+        and make them accessible for all kinds of people.
+    </p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">What is your understanding of ‘citizen archives’? Does it help that people now have their own personal archives?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">I
+        think it is getting a bit narcissistic, but that’s also interesting.
+        These types of archives are not necessarily included in my research.
+        They can be useful but all those unassigned images can also be
+        confusing. Maybe image makers should have an increased responsibility to
+        share their knowledge about what their images and their content can be
+        used for.</p></div>
+    <figure>
+        <div style="background-image: url(&quot;pattern3.png&quot;);" class="image-loaded">
+            <img src="../assets/imgs/5a68c84689ae2-AB_3.jpg" class="image loaded">
+        </div>
+        <div class="figure-caption"><span class="caption"><em>‘Boyz | ████’</em> exhibition in 2010, dealing with the perception of young Moroccan boys in the Netherlands.
   </span></div>
-</figure>
-<div class="interview"><span class="interview-voice">TM</span><p class="interview-question">How do you detach your own fears or preconceptions from a project’s final manifestation?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">
- I don’t. But I do try to present a sense of neutrality. In the last two
- projects, I included my own personal story but I also included factual 
-and historical information about how to read certain images. </p></div><div class="interview"><p class="interview-answer">I
- don’t know if the complete work has to come across as unemotional, but 
-it has to be really clear where the perspective comes from and whose 
-perspective it is. Factual information can help the public to approach a
- subject from different perspectives and to not simply respond 
-emotionally. Not that I think emotional responses are bad, but often 
-they get in the way of a layered approach. For instance, I was at a 
-lecture recently and I was asked why I didn’t put the historical images 
-at the beginning of the <em>(In Matters of) Karl</em> book. It was a 
-conscious decision not to do that. Because those images become shocking 
-when you find out their context. Emotion keeps us from really looking 
-and reflecting on these images. When you have a range of different 
-perspectives, reflecting on these images without actually showing them, 
-you have more space to communicate these perspectives before shock and 
-emotion set in, and make it difficult for any other information to get 
-across.
-</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">Have
- you experienced any of your work inciting controversy rather than 
-creating a better understanding of any of the groups you’ve researched? 
-How do you know whether or not you have done your subject matter a 
-disservice?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">I received one or two negative messages about <em>(In Matters of) Karl</em>,
- criticising the podium I gave to the images and the people portrayed in
- them. I did think, ‘Ok, that person didn’t really read the book, didn’t
- really read the text.’ 
-</p></div><div class="interview"><p class="interview-answer">I think the thoroughness of the research I do protected me from negative comments. 
-</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">What have been the most rewarding aspects of working with the topics you have chosen?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">The <em>(In Matters of) Karl</em>
- book was the work that has received the most attention because of the 
-content. If I had completed this work earlier then I would have had a 
-completely different outcome. Over the years, a new context for this 
-research emerged, which helped me gain new insights and find new images 
-and information. So, getting the response I was hoping for, is really 
-rewarding.</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">How important is collaboration within your practice?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">Very.
- I am a bit of an ‘einzelgänger’. Do you know this word? It’s a German 
-word for when you like to be by yourself, and you like to do things by 
-yourself. This is what I’m like. But then having to work with different 
-people, especially with <a href="http://www.hansgremmen.nl/demo-item" target="_blank">Hans Gremmen</a>,
- I realised that you simply can’t do everything yourself, even if you’d 
-like to. Some people can, but I think you add more depth to your work if
- you collaborate. 
+    </figure>
+    <div class="interview"><span class="interview-voice">TM</span><p class="interview-question">How do you detach your own fears or preconceptions from a project’s final manifestation?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">
+        I don’t. But I do try to present a sense of neutrality. In the last two
+        projects, I included my own personal story but I also included factual
+        and historical information about how to read certain images. </p></div><div class="interview"><p class="interview-answer">I
+        don’t know if the complete work has to come across as unemotional, but
+        it has to be really clear where the perspective comes from and whose
+        perspective it is. Factual information can help the public to approach a
+        subject from different perspectives and to not simply respond
+        emotionally. Not that I think emotional responses are bad, but often
+        they get in the way of a layered approach. For instance, I was at a
+        lecture recently and I was asked why I didn’t put the historical images
+        at the beginning of the <em>(In Matters of) Karl</em> book. It was a
+        conscious decision not to do that. Because those images become shocking
+        when you find out their context. Emotion keeps us from really looking
+        and reflecting on these images. When you have a range of different
+        perspectives, reflecting on these images without actually showing them,
+        you have more space to communicate these perspectives before shock and
+        emotion set in, and make it difficult for any other information to get
+        across.
+    </p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">Have
+        you experienced any of your work inciting controversy rather than
+        creating a better understanding of any of the groups you’ve researched?
+        How do you know whether or not you have done your subject matter a
+        disservice?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">I received one or two negative messages about <em>(In Matters of) Karl</em>,
+        criticising the podium I gave to the images and the people portrayed in
+        them. I did think, ‘Ok, that person didn’t really read the book, didn’t
+        really read the text.’
+    </p></div><div class="interview"><p class="interview-answer">I think the thoroughness of the research I do protected me from negative comments.
+    </p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">What have been the most rewarding aspects of working with the topics you have chosen?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">The <em>(In Matters of) Karl</em>
+        book was the work that has received the most attention because of the
+        content. If I had completed this work earlier then I would have had a
+        completely different outcome. Over the years, a new context for this
+        research emerged, which helped me gain new insights and find new images
+        and information. So, getting the response I was hoping for, is really
+        rewarding.</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">How important is collaboration within your practice?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">Very.
+        I am a bit of an ‘einzelgänger’. Do you know this word? It’s a German
+        word for when you like to be by yourself, and you like to do things by
+        yourself. This is what I’m like. But then having to work with different
+        people, especially with <a href="http://www.hansgremmen.nl/demo-item" target="_blank">Hans Gremmen</a>,
+        I realised that you simply can’t do everything yourself, even if you’d
+        like to. Some people can, but I think you add more depth to your work if
+        you collaborate.
+    </p></div>
+    <figure>
+        <div style="background-image: url(&quot;pattern2.png&quot;);" class="image-loaded">
+            <img src="../assets/imgs/5a68c8b235896-AB_2.jpg" class="image loaded">
+        </div><div class="figure-caption"><span class="caption">Annette Behrens, <em>In Matters of (Karl)</em> [Fw:Books, 2015] book interior
+  </span></div>
+    </figure>
+    <div class="interview"><p class="interview-answer">I knew I didn’t have the knowledge to make a publication like the <em>(In Matters of) Karl</em>
+        book. So I approached the publisher Fw:Books and I knew I really wanted
+        to work with Hans because of his previous work. Hans is a fantastic
+        designer and he had so much knowledge about paper and printing. That’s
+        something I could never have acquired by myself, so I think it is
+        absolutely necessary to include people from different fields. Also
+        working with <a href="http://www.eenentwintig.org/" target="_blank">Raymond Frenken</a>, who wrote one of the texts, and <a href="https://www.kazernedossin.eu/EN/ContactPages/Organisatie/Directie" target="_blank">Christophe Busch</a>, who wrote the biography of Karl Höcker was beneficial.
+    </p></div><div class="interview"><p class="interview-answer">I had a lot
+        of discussions with Raymond during the production of the book, about
+        the content and the history. His background is in writing and he’s a
+        really good researcher. He understood what I wanted to say and added to
+        it.
+    </p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">How did researching <em>(In Matters of) Karl</em> influence your own personal archive? Do you think it’s important to have a personal archive?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">I
+        try to keep an image archive that’s accessible for me, but also
+        available for the people I work with. Maybe this project did bring more
+        awareness about the value of family archives. Accessing these ‘family
+        archives’ will always be difficult. Some people really want to share
+        them, and some absolutely won’t. Often for understandable reasons.
+        Working with other archives made me realise the importance of keeping an
+        accessible archive myself. Not only for a particular project, but in
+        general. I have been influenced by seeing many different archives and
+        the rules they follow. As well as how archivists and others involved in
+        the archive have influence over how images are distributed. Yeah, I was
+        made more aware of this.</p></div></div><p class="article-author-bio">During
+    her study on the Media &amp; Communications BA at Goldsmiths University
+    of London, Estonian-born Tiiu Meiner developed an interest in
+    theoretical studies of social structures and cultures and has since
+    continued to explore alternative perspectives, and how design operates
+    in society.
 </p></div>
-<figure>
-  <div style="background-image: url(&quot;pattern2.png&quot;);" class="image-loaded">
-    <img src="../assets/imgs/5a68c8b235896-AB_2.jpg" class="image loaded">
-  </div><div class="figure-caption"><span class="caption">Annette Behrens, <em>In Matters of (Karl)</em> [Fw:Books, 2015] book interior
-  </span></div>
-</figure>
-<div class="interview"><p class="interview-answer">I knew I didn’t have the knowledge to make a publication like the <em>(In Matters of) Karl</em>
- book. So I approached the publisher Fw:Books and I knew I really wanted
- to work with Hans because of his previous work. Hans is a fantastic 
-designer and he had so much knowledge about paper and printing. That’s 
-something I could never have acquired by myself, so I think it is 
-absolutely necessary to include people from different fields. Also 
-working with <a href="http://www.eenentwintig.org/" target="_blank">Raymond Frenken</a>, who wrote one of the texts, and <a href="https://www.kazernedossin.eu/EN/ContactPages/Organisatie/Directie" target="_blank">Christophe Busch</a>, who wrote the biography of Karl Höcker was beneficial. 
-</p></div><div class="interview"><p class="interview-answer">I had a lot
- of discussions with Raymond during the production of the book, about 
-the content and the history. His background is in writing and he’s a 
-really good researcher. He understood what I wanted to say and added to 
-it. 
-</p></div><div class="interview"><span class="interview-voice">TM</span><p class="interview-question">How did researching <em>(In Matters of) Karl</em> influence your own personal archive? Do you think it’s important to have a personal archive?</p></div><div class="interview"><span class="interview-voice">AB</span><p class="interview-answer">I
- try to keep an image archive that’s accessible for me, but also 
-available for the people I work with. Maybe this project did bring more 
-awareness about the value of family archives. Accessing these ‘family 
-archives’ will always be difficult. Some people really want to share 
-them, and some absolutely won’t. Often for understandable reasons. 
-Working with other archives made me realise the importance of keeping an
- accessible archive myself. Not only for a particular project, but in 
-general. I have been influenced by seeing many different archives and 
-the rules they follow. As well as how archivists and others involved in 
-the archive have influence over how images are distributed. Yeah, I was 
-made more aware of this.</p></div></div><p class="article-author-bio">During
- her study on the Media &amp; Communications BA at Goldsmiths University
- of London, Estonian-born Tiiu Meiner developed an interest in 
-theoretical studies of social structures and cultures and has since 
-continued to explore alternative perspectives, and how design operates 
-in society. 
-</p></div></div></div><p class="footnotes-title">Footnotes</p><div class="column three"><div class="fixedscrollableparent"><div class="fixedscrollable"><div class="footnotes"></div></div></div></div></div></div>
+
+    <div id="makeitpublic" style="font-family: 'Calibre', sans-serif; font-size: 19.2px">
+        <a class="match" href="../../onlineopen.org/wild-images/wild-images.html">
+            <div class="thumb"></div>
+            <div class="content">
+                <div class="source">onlineopen.org</div>
+                <div class="title-author"><span>Wild Images</span> <span>Jorinde Seijdel</span></div>
+                <div class="abstract">There is nothing new in camera images shot by amateurs being able to play a role as evidence and as a visual resource in the reporting and interpretation of signiﬁcant events – witness the Zapruder ﬁlm of the assassination of J.F. Kennedy or the Rodney King video tape. Now, however, digital media and the Internet seem to make an increasing intrusion of amateur images in the professional media inevitable. What is the status of these ‘wild’ images in the public domain? Do they reveal the new blind spots of the ofﬁcial news media? Or do they primarily demonstrate a public desire for images that almost eradicate the distance from events?</div>
+            </div>
+        </a>
+
+        <a class="match placeholder" href="../../amateurcities.com/technology-creativity-future-cities/index.html">
+            <div class="thumb"></div>
+            <div class="content">
+                <div class="source">amateurcities.com</div>
+                <div class="title-author"><span>Technology, Creativity and the future of Cities</span> <span>Christopher Lindinger</span></div>
+                <div class="abstract">Christopher Lindinger, co-director of Ars Electronica Futurelab, talks about the creative lab culture that forms his working environment, shares his thoughts on group dynamics and organizational structures, and reflects on the potential and challenges of technological development for the future of cities and their inhabitants.</div>
+            </div>
+        </a>
+
+        <a class="match placeholder" href="../../amateurcities.com/walking-across-actual-territories/index.html">
+            <div class="thumb"></div>
+            <div class="content">
+                <div class="source">amateurcities.com</div>
+                <div class="title-author"><span>Walking across Actual Territories</span> <span>Lorenzo Romito</span></div>
+                <div class="abstract">Rome-based collective Stalker has been exploring the neglected areas of the Italian capital and engaging with their marginalized populations for more than 20 years. Stalker co-founder Lorenzo Romito reflects on the group’s evolution and future plans.</div>
+            </div>
+        </a>
+
+        <script src="../../src/js/mhp-js.js"></script>
+    </div>
+
+</div></div><p class="footnotes-title">Footnotes</p><div class="column three"><div class="fixedscrollableparent"><div class="fixedscrollable"><div class="footnotes"></div></div></div></div></div></div>
 
 <script type="text/javascript" src="../../dist/script.js"></script>
 </body></html>
